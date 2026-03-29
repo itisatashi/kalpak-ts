@@ -3,14 +3,23 @@
   "version": "1.0.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist/"
+  ],
   "scripts": {
     "test": "jest",
     "build": "tsc"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "keywords": [
+    "karakalpak",
+    "typescirpt",
+    "number-to-text",
+    "text-to-number",
+    "transliterate"
+  ],
+  "author": "Ishipiskenler",
+  "license": "MIT",
+  "description": "Karakalpak language utility tools completely in strict TypeScript.",
   "devDependencies": {
     "@types/jest": "^30.0.0",
     "@types/node": "^25.5.0",
