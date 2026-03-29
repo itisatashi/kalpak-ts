@@ -1,29 +1,29 @@
-import { numberToText } from "../src/numbers-to-text/numbers";
+import { numberToText } from "../src/numbers-to-text/numbersToText";
 
-describe("Sonlarni Qoraqalpoqcha so'zga o'girish", () => {
+describe("Converting Numbers to Words", () => {
 
-  it("0 dan 9 gacha bo'lgan sonlar", () => {
+  it("Numbers from 0 to 9", () => {
     expect(numberToText(0)).toBe("nól");
     expect(numberToText(7)).toBe("jeti");
   });
 
-  it("100 lardan tashkil topgan sonlar", () => {
+  it("Numbers composed of hundreds", () => {
     expect(numberToText(100)).toBe("júz");
     expect(numberToText(102)).toBe("bir júz eki");
   });
 
-  it("Ming va Katta sonlar", () => {
+  it("Thousands and Large numbers", () => {
     expect(numberToText(2026)).toBe("eki miń jigirma altı");
     expect(numberToText(1000000)).toBe("bir million");
   });
 
-  it("Manfiy va Kasr sonlar", () => {
+  it("Negative and Decimal numbers", () => {
     expect(numberToText(-123)).toBe("minus bir júz jigirma úsh");
     expect(numberToText(3.14)).toBe("úsh pútin on tórt");
   });
 
-  it("Xatolik (Error) otishi kerak bo'lgan holatlar", () => {
-    // "toThrow()" bu Jest dagi muvaffaqiyatli "Qizil Xatoni" ushlab olish quroli
+  it("Cases that should throw an error", () => {
+    // toThrow() is Jest's tool to catch and verify errors
     expect(() => numberToText(2000000000000)).toThrow('Number out of range');
   });
 
